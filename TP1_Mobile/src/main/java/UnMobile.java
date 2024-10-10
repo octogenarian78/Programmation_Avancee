@@ -6,7 +6,8 @@ import javax.swing.*;
 class UnMobile extends JPanel implements Runnable
 {
 	int saLargeur, saHauteur, sonDebDessin;
-	int sonPas = 10, sonTemps=50, sonCote=40;
+	int sonPas = 10, sonCote=40;
+	int sonTemps;
 
 	UnMobile(int telleLargeur, int telleHauteur)
 	{
@@ -14,7 +15,7 @@ class UnMobile extends JPanel implements Runnable
 		saLargeur = telleLargeur;
 		saHauteur = telleHauteur;
 		setSize(telleLargeur, telleHauteur);
-		sonTemps = (int) Math.random() * 50 + 50;
+		sonTemps = (int)(Math.random() * 450) + 50;
 	}
 
 	public void run()

@@ -1,15 +1,13 @@
 
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.*;
 
 class UneFenetre extends JFrame
 {
     ArrayList mesTaches;
-    private final int LARG=400, HAUT=250;
+    private final int LARG=1200, HAUT=750;
     int NbMobile;
 
     public UneFenetre(int nbMobile)
@@ -23,10 +21,10 @@ class UneFenetre extends JFrame
         NbMobile=nbMobile;
         Container container=getContentPane();
         mesTaches=new ArrayList<>();
-
+        Cemaphore cemaphore = new CemaphoreGen(100);
         for (int i = 0; i < nbMobile; i++){
 
-            UnMobile sonMobile = new UnMobile(LARG,HAUT/nbMobile);
+            UnMobile sonMobile = new UnMobile(LARG,HAUT/nbMobile,cemaphore);
             Thread laTache = new Thread(sonMobile);
             mesTaches.add(laTache);
 

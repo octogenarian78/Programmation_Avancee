@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Programmation_Avancee.iml" filepath="$PROJECT_DIR$/.idea/Programmation_Avancee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP1_Mobile/TP1_Mobile.iml" filepath="$PROJECT_DIR$/TP1_Mobile/TP1_Mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP2_Exclusion/TP2_Exclusion.iml" filepath="$PROJECT_DIR$/TP2_Exclusion/TP2_Exclusion.iml" />
       <module fileurl="file://$PROJECT_DIR$/TP3_BAL/TP3_BAL.iml" filepath="$PROJECT_DIR$/TP3_BAL/TP3_BAL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP_Boulangerie/TP_Boulangerie.iml" filepath="$PROJECT_DIR$/TP_Boulangerie/TP_Boulangerie.iml" />
     </modules>
   </component>
 </project>

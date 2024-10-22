@@ -59,13 +59,13 @@ public void run()
 comme vous pouvez le voir il n'y a qu'une seul boucle qui fait avancer le mobile donc il nous faut juste ajouter une deuxième boucle qui fait aller notre mobile dans l'autre sens, la voici : 
 ```java
 for (;sonDebDessin > -sonPas; sonDebDessin -= sonPas) {
-				repaint();
-				try {
-					Thread.sleep(sonTemps);
-				} catch (InterruptedException telleExcp) {
-					telleExcp.printStackTrace();
-				}
-			}
+    repaint();
+    try {
+        Thread.sleep(sonTemps);
+    } catch (InterruptedException telleExcp) {
+        telleExcp.printStackTrace();
+    }
+}
 ```
 
 Une fois cela fait, on a essayé de mettre un bouton pour pouvoir stopper et relancer le mobile.
@@ -171,3 +171,5 @@ public void run()
 
 Maintenant, que ce découpage est fait, on définir en tant que section critique la seconde boucle de l'aller et aussi du retour.<br>
 Si on veut pouvoir limiter le nombre de mobiles passant par cette zone, on pourra utiliser la classe **Cemaphore** du TP2_Exclusion ainsi qu'une classe **CemaphoreGen** qui hérite de **Cemaphore**, mais qui différemment de **CemaphoreBinaire** peut laisser passer plusieurs threads en même temps. Il nous suffira juste comme sur la TP2 d'ajouter dans notre classe **Mobile** un attribut de type **Cemaphore** et de le faire pour le constructeur (je ne l'ai pas dit la semaine dernière, mais tous les mobiles doivent avoir le même sémaphore), puis on utilise les méthode ```syncWait()``` (avant la section critique) et ```syncSignal()``` après les sections critique, et avec ça, on peut réguler le nombre de mobiles qui passent dans le second tiers de l'écran.
+
+## Semaine 5 ( 18 octobre )
